@@ -10,6 +10,8 @@
 // @match        https://*.notion.site/*
 // @run-at       document-start
 // @grant        GM_addStyle
+// @updateURL    https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js
+// @downloadURL  https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js
 // ==/UserScript==
 
 (function() {
