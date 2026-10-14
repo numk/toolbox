@@ -6,6 +6,8 @@
 // @match        https://fanyi.baidu.com/*
 // @grant        none
 // @run-at       document-idle
+// @updateURL    https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js
+// @downloadURL  https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js
 // ==/UserScript==
 
 (function () {
