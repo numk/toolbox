@@ -33,11 +33,25 @@ https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/<相对路径>
 
 ### tampermonkey/
 
-油猴脚本。下面的链接是 RAW 地址，可在 Tampermonkey 里从 URL 安装。
+油猴脚本。下面是各脚本的 `@downloadURL`，点代码块右上角即可复制，再在 Tampermonkey 里从 URL 安装。
 
-- [301-Notion代码块字体设置.js](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js)：Notion 代码块字体改为 JetBrains Mono
-- [302-百度翻译净化.js](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js)：去掉百度翻译页面上的广告和推广
-- [303-Github代码设置.js](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/303-Github%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AE.js)：GitHub 代码字体改为 Google Sans Code / Fira Code / JetBrains Mono
+301-Notion代码块字体设置.js：Notion 代码块字体改为 JetBrains Mono
+
+```text
+https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js
+```
+
+302-百度翻译净化.js：去掉百度翻译页面上的广告和推广
+
+```text
+https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js
+```
+
+303-Github代码设置.js：GitHub 代码字体改为 Google Sans Code / Fira Code / JetBrains Mono
+
+```text
+https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/303-Github%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AE.js
+```
 
 ### scripts/
 
