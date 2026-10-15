@@ -42,3 +42,16 @@ https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/<相对路径>
 ### scripts/
 
 其他脚本，按用途放在子目录里。
+
+- [21-alias_bash/alias.sh](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/alias.sh)：读取同目录的 [aliases.sh](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/aliases.sh)，写入 `~/.bashrc` 的标记区块。Ubuntu 与 Windows Git Bash 都适用。重复执行只更新该区块。要改 alias，编辑 `aliases.sh`。
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/alias.sh | bash
+source ~/.bashrc
+```
+
+当前终端立刻生效：
+
+```bash
+source <(curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/alias.sh)
+```
