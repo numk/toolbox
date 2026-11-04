@@ -69,3 +69,35 @@ source ~/.bashrc
 ```bash
 source <(curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/alias.sh)
 ```
+
+
+- [22-prompt/prompt.sh](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/22-prompt/prompt.sh)：256 色提示符，显示用户名、主机、路径、Git 分支（游离 HEAD 显示短提交号）及已激活的 Python 虚拟环境。支持 Windows Git Bash、Ubuntu Bash、macOS Zsh。
+
+默认 Bash + 双行（写入 `~/.bashrc`）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/22-prompt/prompt.sh | bash
+source ~/.bashrc
+```
+
+Bash + 单行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/22-prompt/prompt.sh | bash -s -- --lines 1
+source ~/.bashrc
+```
+
+macOS Zsh + 单行（写入 `${ZDOTDIR:-$HOME}/.zshrc`，通常为 `~/.zshrc`）：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/22-prompt/prompt.sh | bash -s -- --shell zsh --lines 1
+source "${ZDOTDIR:-$HOME}/.zshrc"
+```
+
+参数：`--shell bash|zsh` 默认 `bash`；`--lines 1|2` 默认 `2`。Zsh 双行使用 `--shell zsh --lines 2`。本地运行：`bash scripts/22-prompt/prompt.sh --shell zsh --lines 2`。安装器始终用 Bash 执行，再在对应的 Bash/Zsh 终端里 `source` 配置文件。
+
+配置写入 `# >>> toolbox prompt >>>` / `# <<< toolbox prompt <<<` 标记区块；再次运行会替换该区块，不重复追加，区块外配置保留。后续调整脚本并重新执行即可更新，也可直接修改区块中的 `TOOLBOX_PROMPT_LINES=1` 或 `2` 后重新加载。
+
+Python 虚拟环境仍使用 `source .venv/bin/activate` 激活（Windows Git Bash 为 `source .venv/Scripts/activate`）；提示符自动显示 `py:.venv`，`deactivate` 后隐藏。兼容 `venv`、`virtualenv`、`uv venv`，不自动创建或激活环境。安装时若已激活环境，先 `deactivate`，再加载配置并重新激活，避免旧环境恢复之前的 PS1。
+
+Git Bash 登录启动需由 `~/.bash_profile` 加载 `~/.bashrc`；若已有 `.bash_profile` 却未加载，可加入 `[[ -f ~/.bashrc ]] && source ~/.bashrc`。如使用 Oh My Zsh、Starship 或其他提示符主题，请停用其提示符设置，避免覆盖本区块。
