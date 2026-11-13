@@ -33,29 +33,24 @@ https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/<相对路径>
 
 ### tampermonkey/
 
-油猴脚本。下面是各脚本的 `@downloadURL`，点代码块右上角即可复制，再在 Tampermonkey 里从 URL 安装。
+油猴脚本。在浏览器安装 Tampermonkey 后，点击「安装 / 更新」即可从 GitHub RAW 地址安装。脚本均配置了 `@updateURL` 和 `@downloadURL`，便于后续更新。
 
-301-Notion代码块字体设置.js：Notion 代码块字体改为 JetBrains Mono
-
-```text
-https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js
-```
-
-302-百度翻译净化.js：去掉百度翻译页面上的广告和推广
-
-```text
-https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js
-```
-
-303-Github代码设置.js：GitHub 代码字体改为 Google Sans Code / Fira Code / JetBrains Mono
-
-```text
-https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/303-Github%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AE.js
-```
-
+| 脚本 | 功能 | 适用网站 | 安装地址 |
+| --- | --- | --- | --- |
+| [301-Notion代码块字体设置.js](https://github.com/numk/toolbox/blob/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js) | 将 Notion 代码块字体替换为 JetBrains Mono | Notion | [安装 / 更新](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/301-Notion%E4%BB%A3%E7%A0%81%E5%9D%97%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE.js) |
+| [302-百度翻译净化.js](https://github.com/numk/toolbox/blob/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js) | 清理百度翻译页面中的广告和推广 | 百度翻译 | [安装 / 更新](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/302-%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91%E5%87%80%E5%8C%96.js) |
+| [303-Github代码设置.js](https://github.com/numk/toolbox/blob/main/tampermonkey/303-Github%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AE.js) | 设置 GitHub 代码字体（Google Sans Code / Fira Code / JetBrains Mono） | GitHub、Gist | [安装 / 更新](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/303-Github%E4%BB%A3%E7%A0%81%E8%AE%BE%E7%BD%AE.js) |
+| [304-X时间线广告屏蔽.js](https://github.com/numk/toolbox/blob/main/tampermonkey/304-X%E6%97%B6%E9%97%B4%E7%BA%BF%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD.js) | 根据广告标签、页眉按钮及时间/曝光节点识别并隐藏时间线广告，支持滚动加载 | X / Twitter | [安装 / 更新](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/tampermonkey/304-X%E6%97%B6%E9%97%B4%E7%BA%BF%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD.js) |
 ### scripts/
 
 其他脚本，按用途放在子目录里。
+
+| 脚本 | 功能 | 适用环境 |
+| --- | --- | --- |
+| [21-alias_bash/alias.sh](scripts/21-alias_bash/alias.sh) | 安装并更新 Shell alias；维护 `aliases.sh`，重复执行不重复追加 | Ubuntu Bash、Windows Git Bash |
+| [22-prompt/prompt.sh](scripts/22-prompt/prompt.sh) | 配置彩色终端提示符，显示用户、主机、路径、Git 分支和 Python 虚拟环境 | Ubuntu Bash、Windows Git Bash、macOS Zsh |
+
+以下保留各脚本的安装命令和详细配置说明。
 
 - [21-alias_bash/alias.sh](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/alias.sh)：读取同目录的 [aliases.sh](https://raw.githubusercontent.com/numk/toolbox/refs/heads/main/scripts/21-alias_bash/aliases.sh)，写入 `~/.bashrc` 的标记区块。Ubuntu 与 Windows Git Bash 都适用。重复执行只更新该区块。要改 alias，编辑 `aliases.sh`。
 
